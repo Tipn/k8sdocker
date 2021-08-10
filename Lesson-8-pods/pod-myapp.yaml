@@ -9,12 +9,12 @@ metadata:
     owner: PavelShevkoplias
 spec:
   containers:
-    - name : container-apache
+    - name : container-web
       image: nginx:latest
       ports:
         - containerPort: 80
     
-    - name : container-apache
+    - name : container-api
       image: tomcat:8.5.38
       ports:
         - containerPort: 8080 
