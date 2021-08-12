@@ -13,7 +13,7 @@ spec:
       labels:
         project: kgb
     spec:
-      contaiers:
+      containers:
         - name  : kgb-web
           image:  adv400/k8sphp:version1
           ports:
