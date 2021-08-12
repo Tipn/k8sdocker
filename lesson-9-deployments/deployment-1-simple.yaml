@@ -1,0 +1,17 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: my-web-deployment
+  labels:
+    app : my-k8s-application
+spec:
+  selector:
+    metchLables:
+      project: kgb
+  template:
+    metadata:
+      labels:
+        project: kgb
+    spec:
+      contaiers:
+        - name  : kgb-web
