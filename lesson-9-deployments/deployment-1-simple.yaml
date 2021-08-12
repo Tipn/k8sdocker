@@ -6,7 +6,7 @@ metadata:
     app : my-k8s-application
 spec:
   selector:
-    metchLabels:
+    matchLabels:
       project: kgb
   template:
     metadata:
