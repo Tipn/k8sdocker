@@ -22,3 +22,23 @@ Ansible описывает состояния серверов которое д
 - экономия времени и переносимость решений 
 - Декларатиная система описаний через YML 
 - нет необходимости дополнительно ПО на серверах  
+
+Содержание
+состоит из 14 модулей:
+- Введение 
+- Настройка VM на Linux 
+
+- Базовые понятие Docker
+- Docker Image
+- Сети Docker
+- Docker volumes
+- Docker-compouse
+- Docker regestry
+
+- Базовые понятия Ansible
+- Ansible playbooks
+- Развертка машин с Vagrant
+
+- Docker swarm
+- Ansible - продвинутые темы 
+- Reverse Proxy и управление кластером
