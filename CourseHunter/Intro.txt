@@ -42,3 +42,10 @@ Ansible описывает состояния серверов которое д
 - Docker swarm
 - Ansible - продвинутые темы 
 - Reverse Proxy и управление кластером
+
+Материалы курса 
+
+- 4 проэкта для сборки: - 2 nodJS - Goang -Monorepo (React + NestJS)
+- 1 репозторий проэкта ansible
+- 1 репозторий проэкта vagrant 
+
