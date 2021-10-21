@@ -1,5 +1,5 @@
 https://coursehunter.net/course/docker-ansible-s-nulya-deploy-i-upravlenie-swarm
-
+t.me/purple_code
                             Почему Docker и Ansible?
 
 проблемы Класической развертки приложения 
