@@ -55,3 +55,26 @@ Docker container - процесс в namespaces
 Архитектура процессоров должна совпадать
 В Docker нет ядра по этому АРМ контейнеры можно запускать только на техже процессорах соответственно X86 на подобных системах  
 
+у docker есть клиент -> к демону и он проверяет наличие ноды локально, не найдя будет скачивать контейнер и все что нужно для node создает image -> сохраняет на хосте 
+
+docker run hello-world                  запустит контейнер 
+docker run -it node                     выкачает ноду из регистра 
+управление контейнерами: 
+        Maagment Comands все сущности:
+            builder     Maage builds
+            config      Maage Docker config
+            container   Maage containers     <--
+            context     Maage context
+            engine      Maage the docker engine
+            image       Maage image
+            Network     Maage Network
+            node        Maage Swarm nodes
+            plugin      Maage plugins
+            service     Maage service 
+            stack       Maage Docker stack
+            swarm       Maage Swarm
+            system      Maage trust on Docker image
+            volume      Maage volumes 
+docker run --name [имя контейнера] -d [detech позволяет форкнуть команду и запустить отдельно]
+
+
