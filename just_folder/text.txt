@@ -77,6 +77,21 @@ docker run -it node                     выкачает ноду из реги�
             volume      Maage volumes 
 docker run --name [имя контейнера] -d [detech позволяет форкнуть команду и запустить отдельно] и имедж контейнера 
 docker run --name my_mongo -d mongo
-docker ps       покажет все контейнеры
-
+docker ps -a      покажет все контейнеры
+docker start [name]
+docker stop
+docker pause
+docker unpouse
+docker kill 
+docker container prune      удаляет все старые контейнеры которые уже не используются 
+docker rename determined_bell mongodb       переименовывать контейнеры 
+docker stats        показывает статус контейнера
+docker inspect [name]   выводит json где описывается все что есть в контейнере
+docker inspect -s [name]
+docker inspect -f "{{.State.Status}}" [name]
+docker logs [mongodb] | grep "че ищем"      отыильтрует и вывидит искомое
+docker logs [mongodb] | grep "че ищем" -A 10     вытащит 10 строк после того что ищем 
+docker logs [mongodb] | grep "че ищем" -B 10     вытащит 10 строк перед тем что ищем 
+docker logs [mongodb] > test.txt                запишет все логи в файл
+docker logs [mongodb] | grep "чет там" > test.txt                запишет чет там из логов в файл
 
