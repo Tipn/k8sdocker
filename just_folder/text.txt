@@ -147,20 +147,36 @@ dockerfile -инструкция по сборке
 
 
     команды в dockerfile
-        ARG CODE_VERSIOM=latest
+        ARG CODE_VERSIOM=latest             аргументы сборки
         ARG MY_ARG
 
-        FROM node:14-alpine as build
-        ONBUILD ADD . /app/src
+        FROM node:14-alpine as build        базовый образ
+        ONBUILD ADD . /app/src              Если кто-то базируется на образе
 
-        LABEL version="1.0"
+        LABEL version="1.0"                 мета информация 
 
-        USER root
-        WORKDIR /opt/app
+        USER root                           настройка пользователя и рабочей 
+        WORKDIR /opt/app                    деректории
 
-        ADD *.json ./
+        ADD *.json ./                       добавление файлов в образ
         ADD --chmod=root files* /somedir/
         ADD myarc.tar.gz /somedir/
         ADD http://url/ru/mydata.tar.gz /somedir/
         COPY *.json ./
 
+        SHELL ["/bin/sh", "-c"]
+        RUN echo hello
+
+        ENV F00=1
+        ENV BAR =$F00
+        RUN DEBIAN_FRONTED=noninteracetive apt-get update && apt-get install -y
+
+        VOLUME ["/data"]
+
+        ENTRYPOINT ["TOP", "-C"]
+        CMD [ "node", "./distr/apps/api/main.js" ]
+
+        STOPSIGNAL 9
+
+        EXPOSE 80/tcp
+        
