@@ -121,4 +121,13 @@ sudo du -sh /var/lib/docker/container - disc usage показывает мест
 OverlayFS               слои файловой системы
 
 lower -> link -> dif -> marged -> work
+
+                                    Работа с Imege
+                                
+команды для управления image
+    - build 
+    - history
+    - inspect
+    - import
+    - 
  
