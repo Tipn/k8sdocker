@@ -132,4 +132,16 @@ lower -> link -> dif -> marged -> work
 docker image ls -format {{.Tag}}
 docker image ls --filter "before=node"          фильтрация по имиджам  
     -  
- 
+                    написть свой docker image
+
+dockerfile -инструкция по сборке 
+    FROM node:14-alpine as build                Базовый imege
+    WORKDIR /opt/app                            Установка робочей деректории
+    ADD */fson ./                               добавление файла
+    RUN npm install
+    RUN npm i webpack                           выполнение команды
+    ADD . .
+    RUN npm run build api
+    RUN npm prune --production                  
+    CMD [ "node", "./distr/apps/api/main/js" ]  команда при запуске             
+    
