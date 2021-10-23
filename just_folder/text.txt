@@ -129,5 +129,7 @@ lower -> link -> dif -> marged -> work
     - history
     - inspect
     - import
-    - 
+docker image ls -format {{.Tag}}
+docker image ls --filter "before=node"          фильтрация по имиджам  
+    -  
  
