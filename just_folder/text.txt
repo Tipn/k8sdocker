@@ -144,4 +144,23 @@ dockerfile -инструкция по сборке
     RUN npm run build api
     RUN npm prune --production                  
     CMD [ "node", "./distr/apps/api/main/js" ]  команда при запуске             
-    
+
+
+    команды в dockerfile
+        ARG CODE_VERSIOM=latest
+        ARG MY_ARG
+
+        FROM node:14-alpine as build
+        ONBUILD ADD . /app/src
+
+        LABEL version="1.0"
+
+        USER root
+        WORKDIR /opt/app
+
+        ADD *.json ./
+        ADD --chmod=root files* /somedir/
+        ADD myarc.tar.gz /somedir/
+        ADD http://url/ru/mydata.tar.gz /somedir/
+        COPY *.json ./
+
