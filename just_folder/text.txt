@@ -164,19 +164,23 @@ dockerfile -инструкция по сборке
         ADD http://url/ru/mydata.tar.gz /somedir/
         COPY *.json ./
 
-        SHELL ["/bin/sh", "-c"]
-        RUN echo hello
+            SHELL ["/bin/sh", "-c"]             установка shell
+            RUN echo hello                      выполнение команды в SHELL
 
-        ENV F00=1
-        ENV BAR =$F00
-        RUN DEBIAN_FRONTED=noninteracetive apt-get update && apt-get install -y
+            ENV FOO=1                           переименования окружения 
+            ENV BAR =$FOO
+            RUN DEBIAN_FRONTED=noninteracetive apt-get update && apt-get install -y
 
-        VOLUME ["/data"]
+            VOLUME ["/data"]                    создание volume на host машине
 
-        ENTRYPOINT ["TOP", "-C"]
-        CMD [ "node", "./distr/apps/api/main.js" ]
+            ENTRYPOINT ["TOP", "-C"]            Команды запуска
+            CMD [ "node", "./distr/apps/api/main.js" ]
 
-        STOPSIGNAL 9
+            STOPSIGNAL 9                        сигнал при остановке контейнера
 
-        EXPOSE 80/tcp
-        
+            EXPOSE 80/tcp                       указание порта на котором будет слушать запросы
+
+            # escape=' (backtick)|              инструкцыя для парсера
+
+17 урок Создаем свой image --> 
+
