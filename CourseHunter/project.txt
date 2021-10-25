@@ -45,3 +45,21 @@ $ sudo usermod -aG docker $USER добавляем пользвателя
 
 https://github.com/AlariCode?tab=repositories&q=docker_demo&type=&language=&sort= 
 
+из чего состоит проэкт
+https://github.com/AlariCode/docker-demo
+
+собираю image 
+
+docker build -f ./apps/api/Dockerfile -t test:latest .
+сборка image -f путь к докерфайлу -t teg файла .          все что есть в контексте 
+
+19 lesson
+анализируем image
+
+  https://github.com/wagoodman/dive устанавливаем утилиту для анализа 
+  запуск dive test:latest
+
+
+    
+
+
