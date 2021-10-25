@@ -59,7 +59,17 @@ docker build -f ./apps/api/Dockerfile -t test:latest .
   https://github.com/wagoodman/dive устанавливаем утилиту для анализа 
   запуск dive test:latest
 
+docker run --name api2 -d test:latest
 
-    
+21 lesson сборка go проекта 
+    # демо курса по Docker 2
+    - сборка на golang:alpine
+    - запуск на sceratch из собранного bin
+
+    Сборка следующей командой:
+    '''bash
+    CGO_ENABLE=0 GOOS=linux GOARCH=amd64 go build
+    '''
+        
 
 
