@@ -131,5 +131,8 @@ docker network inspect my-network
 docker exec -it node-2 sh 
       curl node-1:3000        теперь работает 
 
-
-
+docker run --name=node-3 --network my-network -d demo3:latest
+docker network inspect bridge         
+curl localhost:3000         не сможет подключиться 
+docker run --name=node-4 -p3000:3000 --network my-network -d demo3:latest 
+curl localhost:3000         пробросить порт наружу  
