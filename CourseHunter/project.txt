@@ -100,6 +100,34 @@ docker build -t go-api:latest .
       prune
       rm
 
+docker network ls     покажет список и ID сетей Docker 
+  BRIDGE cети 
+      [контейнер1]  [контейнер2] [контейнер3]
+
+port Mapping 
+
+git clone https://github.com/AlariCode/docker-demo-3.git
+
+  docker build -t demo3:latest .
+
+docker images показывает мои image 
+
+docker run --name=node-1 -d demo3:latest
+docker run --name=node-2 -d demo3:latest
 docker network ls
+docker inspect bridge     
+docker ps
+docker exec -it node-1 sh       вход в контейнер node-1
+        curl (ip node-2)172.17.0.3:3000
+        exit
+docker exec -it node-2 sh       в контейнер node-2          контейнеры видят друг друга 
+        curl 172.17.0.2:3000
+
+docker network create my-network
+docker network connect my-network node-1
+docker network connect my-network node-2
+docker network inspect my-network 
+docker exec -it node-2 sh 
+
 
 
