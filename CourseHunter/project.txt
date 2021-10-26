@@ -135,4 +135,14 @@ docker run --name=node-3 --network my-network -d demo3:latest
 docker network inspect bridge         
 curl localhost:3000         не сможет подключиться 
 docker run --name=node-4 -p3000:3000 --network my-network -d demo3:latest 
-curl localhost:3000         пробросить порт наружу  
+curl localhost:3000         пробросить порт наружу 
+
+              24 lesson Host & null 
+
+ docker run --name node-5 -d --network host demo3
+
+docker network inspect host
+
+curl 127.0.0.1:3000
+docker run --name node-6 -d --network none demo3          так поднимется контейнер без доступа к сети 
+
