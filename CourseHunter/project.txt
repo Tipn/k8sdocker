@@ -174,7 +174,15 @@ docker volume inspect demo
 sudo ls /var/lib/docker/volumes/demo
 
 docker run --name volume-1 -d -v demo:/opt/app/data demo4:latest 
+docker rm [name] -f
+docker run --name volume-1 -d -v demo:/opt/app/data -p 3000:3000 demo4:latest 
 
+curl "127.0.0.1:3000/set?id=1234
+docker run --name volume-2 -d -v demo:/opt/app/data -p 3001:3000 demo4:latest
+curl "127.0.0.1:3001/get"
 
-
-
+docker rm [volume-1] -f 
+docker rm [volume-2] -f 
+docker ps -a
+sudo cat /var/lib/docker/volumes/demo/_data/req
+docker volume rm demo
