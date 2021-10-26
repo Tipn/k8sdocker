@@ -161,5 +161,20 @@ docker run --name node-8 -d --dns 8.8.8.8 demo3         запуск конте�
     - Экспортирование логов
     - Передача конфигов в контейнер 
     - share данных между контейнерами (два контейнера шерят volume)
-    
+
+
+                  27 использование volumes 
+https://github.com/AlariCode/docker-demo-4.git
+
+docker build -t demo4:latest .
+docker volume ls
+docker volume prune
+docker volume create demo
+docker volume inspect demo
+sudo ls /var/lib/docker/volumes/demo
+
+docker run --name volume-1 -d -v demo:/opt/app/data demo4:latest 
+
+
+
 
