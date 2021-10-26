@@ -122,12 +122,14 @@ docker exec -it node-1 sh       вход в контейнер node-1
         exit
 docker exec -it node-2 sh       в контейнер node-2          контейнеры видят друг друга 
         curl 172.17.0.2:3000
-
+        curl node-1:3000        неработает 
+        
 docker network create my-network
 docker network connect my-network node-1
 docker network connect my-network node-2
 docker network inspect my-network 
 docker exec -it node-2 sh 
+      curl node-1:3000        теперь работает 
 
 
 
