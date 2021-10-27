@@ -186,3 +186,7 @@ docker rm [volume-2] -f
 docker ps -a
 sudo cat /var/lib/docker/volumes/demo/_data/req
 docker volume rm demo
+
+                28 Volume в Dockerfile
+
+изминения в Dockerfile добавил строчку Volume  
