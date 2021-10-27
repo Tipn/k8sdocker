@@ -189,4 +189,10 @@ docker volume rm demo
 
                 28 Volume в Dockerfile
 
-изминения в Dockerfile добавил строчку Volume  
+изминения в Dockerfile добавил строчку Volume 
+
+    Docker build -t 
+    docker run --name volume-3 -d -p 3000:3000 demo4-1
+    docker volume ls
+    curl "127.0.0.1:3000/set?id=123"
+    docker inspect volumeNAME
