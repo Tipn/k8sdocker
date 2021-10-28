@@ -199,6 +199,8 @@ docker volume rm demo
 
               29 использование bind mounts
 
-            docker run --name volume-5 -d -p 3000:3000 -v /home/alari/data:/opt/app/data  demo4-1
+            docker run --name volume-5 -d -p 3000:3000 -v /home/alari/data:/opt/app/data  demo4-1   
+            вместо биндинга volume которы хранился бы в docker, указал конкретный каталог /home/alari/data: где сохраняются данные из контейнера /opt/app/data 
             появится папка data на уровень выше 
+            curl "127.0.0.1:3000/set?id=12345"
 
