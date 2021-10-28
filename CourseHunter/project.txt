@@ -196,3 +196,9 @@ docker volume rm demo
     docker volume ls
     curl "127.0.0.1:3000/set?id=123"
     docker inspect volumeNAME
+
+              29 использование bind mounts
+
+            docker run --name volume-5 -d -p 3000:3000 -v /home/alari/data:/opt/app/data  demo4-1
+            появится папка data на уровень выше 
+
