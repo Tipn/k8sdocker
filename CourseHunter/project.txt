@@ -217,6 +217,7 @@ docker volume rm demo
   docker stop volume-6
   docker start volume-6
   curl "127.0.0.1:3000/get"       не будет ни каких данных в контейнере 
+  docker run --name volume-7 -d -p 3000:3001 --mount type=tmpfs,destination=/opt/app/data demo4-1       тоже монтирование с помощью тмпфс  
 
 
 
