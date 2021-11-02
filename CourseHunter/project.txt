@@ -224,6 +224,15 @@ docker volume rm demo
       docker run --name volume-0 -d -p 3001:3001 demo4
       curl "127.0.0.1:3001/get"
     curl: (52) Empty reply from server      ?почему то на 3001 не работало? 
+      55  docker run --name volume-9 -d -p 3000:3000 demo4
+      56  curl "127.0.0.1:3000/get"
+      57  docker cp /home/alari/data/ volume-9:/opt/app/data
+      58  curl "127.0.0.1:3000/get"
+      59  docker cp volume-9:/opt/app/data /home/alari/test
+      60  ls
+      61  ls test
+    
+ 
       
 
 
