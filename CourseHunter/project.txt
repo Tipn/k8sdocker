@@ -231,6 +231,8 @@ docker volume rm demo
       59  docker cp volume-9:/opt/app/data /home/alari/test
       60  ls
       61  ls test
+      62  docker cp volume-9:/opt/app/data/. /home/alari/test2      для копии содержимого папки 
+
     
  
       
