@@ -286,7 +286,10 @@ singline: >
   которая будет вылезать 
   за край... 
 
+установка docker compouse https://docs.docker.com/compose/install/
+sudo chmod +x /usr/local/bin/docker-compose даем права что не виполнять под sudo 
 
+нужен 
 
     
  
