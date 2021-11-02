@@ -233,6 +233,39 @@ docker volume rm demo
       61  ls test
       62  docker cp volume-9:/opt/app/data/. /home/alari/test2      для копии содержимого папки 
 
+              32 работа c YAML 
+        формат написания как и где он используется: 
+          - docker
+          - kubernetes
+          - Ansible
+          - promiteus
+      Yam Aint Marcker Languge
+отличие от XML & JSON в отсутсвии тегов и скобок. все зависит от отступов и переносов!
+
+      пример Yaml:
+name: test
+name2: "test /n"
+name3: 'sdfsdf'
+
+age: 30
+versio: 1.7
+
+# коментарий 
+isDef: true
+isDef2: on 
+isDef3: yes
+
+user:
+  name: Вася
+  age: 20
+
+users:
+  - name: Вася
+    age: 20
+  - name: Анна
+    age: 18
+
+
     
  
       
