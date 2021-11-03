@@ -291,6 +291,9 @@ sudo chmod +x /usr/local/bin/docker-compose даем права что не ви
 
 нужен 
 
+docker-compose up -d 
+docker ps 
+docker logs 
     
  
       
