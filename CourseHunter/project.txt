@@ -294,6 +294,17 @@ sudo chmod +x /usr/local/bin/docker-compose даем права что не ви
 docker-compose up -d 
 docker ps 
 docker logs 
+
+            36 Профили
+
+        запись профиля в docker-compose добавляется 
+                                        profile: 
+               docker-compose down
+                docker-compose --profile backend up -d
+                COMPOSE_PROFILES=backend docker-compose up -d
+                cat docker-compose.yml
+                docker-compose run api
+
     
  
       
