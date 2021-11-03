@@ -1,0 +1,23 @@
+version: "3"
+services:
+    api:
+        build:
+            context: .
+            dockerfile: ./apps/api/Dockerfile
+        restart: always
+        container_name: api
+        volumes:
+        - ./.env:/opt/app/.env
+        networks:
+        - myNetwork
+    rmq:
+        image: rebbitmq:3-management
+        restart: always
+        - myNetwork
+        environment:
+        - RABBITMQ_DEFFAULT_USER=admin
+        - RABBITMQ_DEFFAULT_PASS=admin
+
+networks:
+    myNetworks:
+        driver: bridge
