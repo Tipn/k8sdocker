@@ -307,13 +307,23 @@ docker logs
 
                 nano docker-compose.yml       там добавили профиль profiles: ["queue"]
                 docker-compose --profile backend up -d                   попробовал запустить и не работает без указания нового профиля 
-                docker-compose --profile backend --profile queue up -d    зараюотало
+                docker-compose --profile backend --profile queue up -d    заработало
+                 docker-compose down
+                
+
       
       профайлы помагают нам разделить запуски некоторых частей compose
       хороши когда небходимо сервис для бекапов или еще чегото 
       но с профайлами нужно быть аккуратным потому как не указав все профайлы можешь потерять часть функционала 
       
-            37
+            37 переменные окружения Docker-compose 
+
+          nano .env.compose               вставляем туда переменную имени NAME=4etApi
+         docker-compose --env-file .env.compose up -d       поднимется только сеть потому как включены профили с прошлого занятия 
+         docker-compose --env-file .env.compose config      проверка как подставились переменные для отладки перед запуском  
+
+      
+
 
 
 
