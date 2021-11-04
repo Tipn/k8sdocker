@@ -19,8 +19,6 @@ services:
     profiles: ["queue"]
     networks:
     - myNetwork
-    env_file:
-    - .env
     environment:
     - RABBITMQ_DEFFAULT_USER=admin
     - RABBITMQ_DEFFAULT_PASS=admin

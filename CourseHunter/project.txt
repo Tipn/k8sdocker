@@ -322,6 +322,11 @@ docker logs
          docker-compose --env-file .env.compose up -d       поднимется только сеть потому как включены профили с прошлого занятия 
          docker-compose --env-file .env.compose config      проверка как подставились переменные для отладки перед запуском  
 
+         также есть возможность записывать переменные в docker-compose.yml  перед переменной enviroment: если переменных много и они хранятся в отдельном файле
+    env_file:
+    - .env
+
+    
       
 
 
