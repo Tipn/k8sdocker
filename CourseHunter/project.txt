@@ -303,7 +303,21 @@ docker logs
                 docker-compose --profile backend up -d
                 COMPOSE_PROFILES=backend docker-compose up -d
                 cat docker-compose.yml
-                docker-compose run api
+                docker-compose run api        зашел в контейнер и не смог выйти 
+
+                nano docker-compose.yml       там добавили профиль profiles: ["queue"]
+                docker-compose --profile backend up -d                   попробовал запустить и не работает без указания нового профиля 
+                docker-compose --profile backend --profile queue up -d    зараюотало
+      
+      профайлы помагают нам разделить запуски некоторых частей compose
+      хороши когда небходимо сервис для бекапов или еще чегото 
+      но с профайлами нужно быть аккуратным потому как не указав все профайлы можешь потерять часть функционала 
+      
+            37
+
+
+
+ 
 
     
  
