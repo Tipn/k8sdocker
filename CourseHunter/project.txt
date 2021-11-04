@@ -325,8 +325,9 @@ docker logs
          также есть возможность записывать переменные в docker-compose.yml  перед переменной enviroment: если переменных много и они хранятся в отдельном файле
     env_file:
     - .env
+    COMPOSE_PROJECT_NAME=mycompose docker-compose --env-file .env.compose up -d         позволяет собрать контейнеры с определенным именем 
 
-    
+
       
 
 
