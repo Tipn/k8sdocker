@@ -328,6 +328,10 @@ docker logs
     COMPOSE_PROJECT_NAME=mycompose docker-compose --env-file .env.compose up -d         позволяет собрать контейнеры с определенным именем 
 
 
+                    38 Выкатываем полное приложение 
+      
+
+
       
 
 
