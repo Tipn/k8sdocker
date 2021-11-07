@@ -343,7 +343,10 @@ docker logs
                 - 15672:15672
       для запуска уже 2 файлов нужно ввести:
       docker-compose -f docker-compose.yml docker-compose.dev.yml up -d 
+      docker-compose -f docker-compose.yml docker-compose.dev.yml config        для проверки что будет ствртовать
       
+
+
 
 
       
