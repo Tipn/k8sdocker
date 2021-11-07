@@ -341,7 +341,10 @@ docker logs
               rmq:
                 ports:
                 - 15672:15672
-      для запуска уже 2 файлов нужноЖ
+      для запуска уже 2 файлов нужно ввести:
+      docker-compose -f docker-compose.yml docker-compose.dev.yml up -d 
+      
+
 
       
 
