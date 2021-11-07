@@ -344,7 +344,36 @@ docker logs
       для запуска уже 2 файлов нужно ввести:
       docker-compose -f docker-compose.yml docker-compose.dev.yml up -d 
       docker-compose -f docker-compose.yml docker-compose.dev.yml config        для проверки что будет ствртовать
-      
+
+         заменям в compose удаленное описание отдельного сервиса:
+        api:
+          extends:
+            file: docker-compose.api.yml
+            sevice: api 
+          deoends_on:
+          - rmq 
+
+     а в файле docker-compose.api.yml прописываем нужные данные:
+        version: "3"
+        services:
+          api: 
+            build:
+              context:
+              dockerfile: /apps/api/Dockerfile
+            restart: always
+            container_name: api 
+            volumes:
+            - ./.env:/opt/app/ .env
+            ports: 
+            - 3002:3000
+            networks:
+            - myNetwork
+
+
+
+     
+
+
 
 
 
