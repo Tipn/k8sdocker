@@ -370,7 +370,7 @@ docker logs
             networks:
             - myNetwork
 
-
+          40 Docker Registry
 
      
 
