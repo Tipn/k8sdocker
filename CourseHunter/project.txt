@@ -371,7 +371,12 @@ docker logs
             - myNetwork
 
           40 Docker Registry - это приложение позыоляющее через api взаимодействовать с репозиториями поумолчанию DockerHub 
-                                формат записи для push my-registry/my-image:tag   
+                                формат записи для push my-registry/my-image:tag 
+
+          docker pull node 
+          docker-compose pull   
+          Docker seach node                 выведет все контейнеры где встречается node 
+          Docker serch --no-trunc node      позволяет посмотреть описание полностью 
 
 
      
