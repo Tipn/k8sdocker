@@ -370,7 +370,9 @@ docker logs
             networks:
             - myNetwork
 
-          40 Docker Registry
+          40 Docker Registry - это приложение позыоляющее через api взаимодействовать с репозиториями поумолчанию DockerHub 
+                                формат записи для push my-registry/my-image:tag   
+
 
      
 
