@@ -380,7 +380,12 @@ docker logs
 
           41 GitHub regisry - позволяет публиковать пакеты и Docker imeges 
                 для работы с токеннами нужно создать токен в gitHub setings -> Developer setings -> Personal accestoken 
+                     вариант передачи токена с хоста:
+                     копируем сгенерированый токен в файл TOKEN.txt на хосте 
+                     $ cat TOKEN.txt | docker login https://docker.pkg.github.com -u Tipn --password-stdin
+                     так я залогинелся в git с пакетами докера 
 
+        получилос с pullить -> docker pull ghcr.io/alaricode/top-api-demo/top-api-demo:develop
 
      
 
