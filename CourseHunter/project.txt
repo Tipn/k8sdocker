@@ -375,8 +375,11 @@ docker logs
 
           docker pull node 
           docker-compose pull   
-          Docker seach node                 выведет все контейнеры где встречается node 
+          Docker seach node                 выведет все имеджи где встречается node 
           Docker serch --no-trunc node      позволяет посмотреть описание полностью 
+
+          41 GitHub regisry - позволяет публиковать пакеты и Docker imeges 
+                для работы с токеннами нужно создать токен в gitHub setings -> Developer setings -> Personal accestoken 
 
 
      
