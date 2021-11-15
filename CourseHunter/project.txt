@@ -387,6 +387,12 @@ docker logs
 
         получилос с pullить -> docker pull ghcr.io/alaricode/top-api-demo/top-api-demo:develop
 
+          42 поднимаем свой registry инфа как разыернуть свой regisry есть на сайте https://docs.Docker.com/registry/deploying
+          для простоты мы поднимим просто локальный реджистри 
+          - написать композ файл 
+          - тегнуть имедж 
+          - запушить 
+
      
 
 
