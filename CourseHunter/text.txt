@@ -1,6 +1,3 @@
-new file 
-hello world 
-
 Command in Linux
 
 rm - R ~                удалить папку 
@@ -133,8 +130,11 @@ docker image ls -format {{.Tag}}
 docker image ls --filter "before=node"          фильтрация по имиджам  
     -  
                     написть свой docker image
+_______________
+                    dockerfile -инструкция по сборке 
 
-dockerfile -инструкция по сборке 
+Контекст выполнения кманды Docker build со всеми вложенними файлами и дерикториями, вверх на уровень подниматься не
+
     FROM node:14-alpine as build                Базовый imege
     WORKDIR /opt/app                            Установка робочей деректории
     ADD */fson ./                               добавление файла
@@ -160,9 +160,9 @@ dockerfile -инструкция по сборке
 
         ADD *.json ./                       добавление файлов в образ
         ADD --chmod=root files* /somedir/
-        ADD myarc.tar.gz /somedir/
+        ADD myarc.tar.gz /somedir/                  что мы скопируем, куда мы скопируем 
         ADD http://url/ru/mydata.tar.gz /somedir/
-        COPY *.json ./
+        COPY *.json ./                              что мы скопируем, куда мы скопируем + придедущих 
 
             SHELL ["/bin/sh", "-c"]             установка shell
             RUN echo hello                      выполнение команды в SHELL
@@ -173,14 +173,14 @@ dockerfile -инструкция по сборке
 
             VOLUME ["/data"]                    создание volume на host машине
 
-            ENTRYPOINT ["TOP", "-C"]            Команды запуска
-            CMD [ "node", "./distr/apps/api/main.js" ]
+        ENTRYPOINT ["TOP", "-C"]            Команды запуска
+        CMD [ "node", "./distr/apps/api/main.js" ]
 
-            STOPSIGNAL 9                        сигнал при остановке контейнера
+        STOPSIGNAL 9                        сигнал при остановке контейнера
 
-            EXPOSE 80/tcp                       указание порта на котором будет слушать запросы
+        EXPOSE 80/tcp                       указание порта на котором будет слушать запросы
 
-            # escape=' (backtick)|              инструкцыя для парсера
+        # escape=' (backtick)|              инструкцыя для парсера
 
 17 урок Создаем свой image --> 
 
